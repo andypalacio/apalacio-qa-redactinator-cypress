@@ -19,7 +19,9 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "cypress": "^13.10.0"
+    "cypress": "^13.10.0",
+    "cypress-image-diff-html-report": "^2.1.2",
+    "cypress-image-diff-js": "^2.1.4"
   },
   "cypress-cucumber-preprocessor": {},
   "stepDefinitions": [

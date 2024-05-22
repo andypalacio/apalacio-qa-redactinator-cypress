@@ -1,0 +1,25 @@
+{
+  "name": "apalacio-qa-redactinator-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andypalacio/apalacio-qa-redactinator-cypress.git"
+  },
+  "author": "Andy Palacio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andypalacio/apalacio-qa-redactinator-cypress/issues"
+  },
+  "homepage": "https://github.com/andypalacio/apalacio-qa-redactinator-cypress#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.10.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}

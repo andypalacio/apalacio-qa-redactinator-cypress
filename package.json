@@ -20,5 +20,9 @@
     "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^13.10.0"
-  }
+  },
+  "cypress-cucumber-preprocessor": {},
+  "stepDefinitions": [
+    "cypress/e2e/[filepath]/*/.{js,ts}"
+  ]
 }

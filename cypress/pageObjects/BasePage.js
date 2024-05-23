@@ -10,7 +10,7 @@ export class BasePage {
         cy.visit(url);
     }
 
-    checkURL(url){
+    checkURL(url) {
         cy.url().should('include', url)
     }
 }

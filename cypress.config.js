@@ -2,6 +2,9 @@ const {defineConfig} = require('cypress')
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const createEsbuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esbuild').createEsbuildPlugin;
 const addCucumberPreprocessorPlugin = require('@badeball/cypress-cucumber-preprocessor').addCucumberPreprocessorPlugin;
+const { addMatchImageSnapshotPlugin } = require('@simonsmith/cypress-image-snapshot/plugin');
+const { allureCypress } = require("allure-cypress/reporter");
+
 
 async function setupNodeEvents(on, config) {
     await addCucumberPreprocessorPlugin(on, config);
@@ -12,7 +15,16 @@ async function setupNodeEvents(on, config) {
             plugins: [createEsbuildPlugin(config)],
         })
     );
-    // Make sure to return the config object as it might have been modified by the plugin.
+    allureCypress(on, {
+        resultsDir: "./allure-results",
+        links: [
+            { type: "issue", urlTemplate: "https://issues.example.com/%s" },
+            { type: "tms", urlTemplate: "https://tms.example.com/%s" },
+        ],
+    });
+
+    addMatchImageSnapshotPlugin(on);
+
     return config;
 }
 

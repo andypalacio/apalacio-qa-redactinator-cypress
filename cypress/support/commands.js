@@ -8,6 +8,8 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+const { addMatchImageSnapshotCommand } = require('@simonsmith/cypress-image-snapshot/command');
+addMatchImageSnapshotCommand();
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })

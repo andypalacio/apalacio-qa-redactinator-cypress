@@ -14,7 +14,15 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+import "allure-cypress/commands";
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+const { addMatchImageSnapshotCommand } = require('@simonsmith/cypress-image-snapshot/command');
+
+addMatchImageSnapshotCommand();
+
+// can also add any default options to be used
+// by all instances of `matchImageSnapshot`
+addMatchImageSnapshotCommand({
+    failureThreshold: 0.2,
+});

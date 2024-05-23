@@ -8,4 +8,8 @@ export class RedactinatorPage extends BasePage {
     clickButton(caption) {
         cy.contains(caption).click();
     }
+
+    validateBBIsAdded(imageNumber) {
+        cy.get('#fgCanvas').matchImageSnapshot(`canvasWithBox${imageNumber}`)
+    }
 }

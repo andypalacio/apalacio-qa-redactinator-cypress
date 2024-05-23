@@ -6,3 +6,7 @@ jspm_packages/
 .idea/
 
 cypress/screenshots
+cypress/snapshots/redactinator.feature/__diff_output__/
+
+allure-report/
+allure-results/

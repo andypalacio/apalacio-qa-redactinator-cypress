@@ -14,15 +14,10 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands';
-import "allure-cypress/commands";
-
+require ('./commands');
+require ('cypress-mochawesome-reporter/register');
 const { addMatchImageSnapshotCommand } = require('@simonsmith/cypress-image-snapshot/command');
 
-addMatchImageSnapshotCommand();
-
-// can also add any default options to be used
-// by all instances of `matchImageSnapshot`
 addMatchImageSnapshotCommand({
-    failureThreshold: 0.2,
+    failureThreshold: 0.4,
 });

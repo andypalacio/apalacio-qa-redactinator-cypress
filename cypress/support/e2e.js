@@ -14,9 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-require ('./commands');
-require ('cypress-mochawesome-reporter/register');
-const { addMatchImageSnapshotCommand } = require('@simonsmith/cypress-image-snapshot/command');
+require('./commands');
+require('cypress-mochawesome-reporter/register');
+const {addMatchImageSnapshotCommand} = require('@simonsmith/cypress-image-snapshot/command');
 
 addMatchImageSnapshotCommand({
     failureThreshold: 0.4,

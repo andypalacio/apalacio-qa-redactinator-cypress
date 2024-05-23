@@ -13,17 +13,17 @@ export class MyQueue extends BasePage {
         cy.contains(eConsult).get('.thumbnail').children('[src="assets/check.png"]').should('be.visible');
     }
 
-    clickQueueButton(eConsult, button, caption){
+    clickQueueButton(eConsult, button, caption) {
         cy.contains(eConsult)
             .siblings()
             .siblings('.container')
             .first()
             .get(button)
             .contains(caption).click();
-     }
+    }
 
     validateIsRedirectedTo(url) {
-        cy.url().should('contain',url);
+        cy.url().should('contain', url);
     }
 
     clickOnAttachment() {

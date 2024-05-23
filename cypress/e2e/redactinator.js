@@ -6,7 +6,7 @@ const {RedactinatorPage} = require("../pageObjects/RedactinatorPage");
 const page = new MyQueue();
 const redactin = new RedactinatorPage();
 let selEConsult = 0;
-let attachmnt = 1;
+let attachmnt = 0;
 
 
 Given(/^the user visits ([^"]*) page$/, (expectedPage) => {
@@ -34,9 +34,9 @@ When(/^the user clicks on the same attachment$/, () => {
     page.clickOnAttachment()
 });
 Given(/^a black box is added to the attachment$/, () => {
-    redactin.validateBBIsAdded(attachmnt);
     attachmnt += 1;
+    redactin.validateBBIsAdded(attachmnt);
 });
 Then(/^the attachment has the recently added censor$/, () => {
-
+    redactin.validateBBIsAdded(attachmnt);
 });

@@ -9,3 +9,4 @@ export const possibleButtons = {
     'New censor': 'New censor',
     'Done': 'Done'
 }
+

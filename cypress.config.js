@@ -34,7 +34,7 @@ module.exports = defineConfig({
     reporterOptions: {
         charts: true,
         video: false,
-
+        embeddedScreenshots: true
     },
     e2e: {
         specPattern: "**/*.feature",
